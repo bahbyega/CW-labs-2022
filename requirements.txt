@@ -1,2 +1,5 @@
 jupyter
 jupyterlab
+scipy
+matplotlib
+pandas
