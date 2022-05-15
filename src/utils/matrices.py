@@ -28,7 +28,15 @@ def create_random_matrices(range):
     return [create_random_matrix(i) for i in range]
 
 def create_random_sparse_matrix(size):
-    return np.matrix(sparse.random(size, size, density=0.3).toarray())
+    not_singular = True
+
+    while not_singular:
+        matr = np.matrix(sparse.random(size, size, density=0.3).toarray())
+
+        if la.det(matr) != 0.0:
+            not_singular = False
+
+    return matr
 
 def create_random_sparse_matrices(range):
     return [create_random_sparse_matrix(i) for i in range]
