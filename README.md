@@ -14,3 +14,9 @@ Activate environment:
 $ conda create -n cw-labs-2022-env --file requirements.txt
 $ conda activate cw-labs-2022-env
 ```
+
+## Execution
+Run jupyter notebooks locally:
+```
+jupyter-lab
+```
